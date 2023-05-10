@@ -63,6 +63,11 @@ flutter:
     - images/key.png
     - images/logo.png
     - images/luxury-real-estate.jpeg
+    - images/about-us-one.jpeg
+    - images/about-us-two.jpeg
+    - images/card-one.jpg
+    - images/card-two.jpg
+    - images/card-three.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
