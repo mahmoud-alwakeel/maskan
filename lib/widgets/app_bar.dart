@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
+commented this part because i no longer use it but i can come back in the future to modify or use it
 // The argument type 'MyAppBar' can't be assigned
 // to the parameter type 'PreferredSizeWidget?
 // that's why we need to add implements PreferredSizeWidget
@@ -119,7 +120,7 @@ class _MyAppBarState extends State<MyAppBar> {
       ),
     );
   }
-}
+} */
 
 
 

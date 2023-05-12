@@ -6,11 +6,8 @@ class PropertiesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar(),
-      body: Container(
-        child: Text("Properties screen", style: TextStyle(fontSize: 30),),
-      ),
+    return  Container(
+        child: const Text("Properties screen", style: TextStyle(fontSize: 30),),
     );
   }
 }

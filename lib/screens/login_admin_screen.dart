@@ -6,9 +6,7 @@ class LoginAdminScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar(),
-      body: Stack(
+    return Stack(
         children: [
           Image.asset(
             'images/key.png',
@@ -103,7 +101,6 @@ class LoginAdminScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }

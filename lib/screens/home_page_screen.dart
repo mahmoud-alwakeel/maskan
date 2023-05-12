@@ -9,9 +9,7 @@ class HomePageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar(),
-      body: SingleChildScrollView(
+    return SingleChildScrollView(
         child: Column(
           children: [
             Stack(
@@ -155,8 +153,7 @@ class HomePageScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      //bottomNavigationBar: const BottomAppBar(),
-    );
+      );
+      //bottomNavigationBar: const BottomAppBar(
   }
 }
