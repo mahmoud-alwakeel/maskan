@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:maskan/widgets/app_bar.dart';
 import 'package:maskan/widgets/card_widget.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePageScreen extends StatelessWidget {
+  const HomePageScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBar(),
+      appBar: MyAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
