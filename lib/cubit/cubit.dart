@@ -6,6 +6,7 @@ import '../screens/about_us_screen.dart';
 import '../screens/home_page_screen.dart';
 import '../screens/login_admin_screen.dart';
 import '../screens/properties_screen.dart';
+import '../shared/network/remote/dio_helper.dart';
 
 // cubit needs only one class (1 state)
 // and we have multiple states in our app
@@ -21,7 +22,7 @@ class MaskanCubit extends Cubit<MaskanStates>{
 
   int currentIndex = 0;
 
-  List<Widget> screens = [
+  List<Widget> screens = const [
     HomePageScreen(),
     AboutUsScreen(),
     PropertiesScreen(),
@@ -40,7 +41,7 @@ class MaskanCubit extends Cubit<MaskanStates>{
     emit(MaskanChangeBottomNavBarState());
   }
 
-  List<BottomNavigationBarItem> bottomItems =  [
+  List<BottomNavigationBarItem> bottomItems = const [
     BottomNavigationBarItem(
       icon: Icon(Icons.home),
       label: 'Home',
@@ -54,4 +55,25 @@ class MaskanCubit extends Cubit<MaskanStates>{
       label: 'Properties',
     ),
   ];
+
+  List<dynamic> properties = [];
+
+  void getProperties(){
+    emit(MaskanGetPropertiesLoadingState());
+    DioHelper.getData(
+      url: 'Property/GetAllProperties',
+      //query: {'PropertyID':'19',}
+    )?.then((value) {
+      // var seller = value?.data['dealType'];
+      //print(value?.data['dealType']['deals']['properties'][0]['seller']['sellerName']);
+      print('niceeeeeeeeeeeeeeeee');
+      print(value?.data.toString());
+
+      emit(MaskanGetPropertiesSuccessState());
+    }).catchError((onError) {
+      print('errrrroooooooooorrrrrr');
+      print(onError.toString());
+      emit(MaskanGetPropertiesErrorState(onError.toString()));
+    });
+  }
 }

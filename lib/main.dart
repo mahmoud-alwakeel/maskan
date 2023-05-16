@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:maskan/layout/home_layout.dart';
 import 'package:maskan/screens/about_us_screen.dart';
@@ -7,15 +10,29 @@ import 'package:maskan/screens/login_admin_screen.dart';
 import 'package:maskan/screens/properties_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:maskan/shared/bloc_observer.dart';
+import 'package:maskan/shared/network/remote/dio_helper.dart';
+import 'package:maskan/shared/network/remote/api_service.dart';
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
 
 void main() {
   Bloc.observer = MyBlocObserver();
-  runApp(const MyApp());
+  DioHelper.init();
+  HttpOverrides.global = MyHttpOverrides();
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   const MyApp({super.key});
 
+  //Uri myUrl = Uri.parse('https://localhost:7046/');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

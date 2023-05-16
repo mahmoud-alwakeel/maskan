@@ -1,13 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:maskan/cubit/cubit.dart';
+import 'package:maskan/cubit/states.dart';
 import 'package:maskan/widgets/app_bar.dart';
 
-class PropertiesScreen extends StatelessWidget {
+import '../shared/components/components.dart';
+import '../shared/network/remote/api_service.dart';
+
+class PropertiesScreen extends StatefulWidget {
   const PropertiesScreen({Key? key}) : super(key: key);
+  @override
+  State<PropertiesScreen> createState() => _PropertiesScreenState();
+}
+
+class _PropertiesScreenState extends State<PropertiesScreen> {
+  late Widget bodyWidget;
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        child: const Text("Properties screen", style: TextStyle(fontSize: 30),),
+    return BlocConsumer<MaskanCubit , MaskanStates>(
+      listener: (context, state){},
+        builder: (context, state) {
+        var list = MaskanCubit.get(context).properties;
+        if (state!= MaskanGetPropertiesLoadingState) {
+          return ListView.separated(
+            itemBuilder: (context, index) => buildPropertyItem(list),
+            separatorBuilder: (context, index) => myDivider(),
+            itemCount: 6,
+          );
+        }
+        else return Center(child: CircularProgressIndicator(),);
+          }
     );
   }
 }
+
+
+
+// child: FutureBuilder<Property>(
+//   future: futureProperty,
+//   builder: (context, snapshot) {
+//     if (snapshot.hasData) {
+//       return Text(snapshot.data!.seller as String);
+//     } else if (snapshot.hasError) {
+//       return Text('${snapshot.error}');
+//     }
+//
+//     return const CircularProgressIndicator();
+//   },
+// ),
+
+
+// late Future<Property> futureProperty;
+//
+// @override
+// void initState() {
+//   super.initState();
+//   futureProperty = fetchProperty();
+// }

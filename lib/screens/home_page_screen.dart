@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:maskan/widgets/app_bar.dart';
 import 'package:maskan/widgets/card_widget.dart';
 
+import '../shared/components/components.dart';
+
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({Key? key}) : super(key: key);
 
@@ -121,6 +123,11 @@ class HomePageScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  // ListView.separated(
+                  //   itemBuilder: (context, index) => buildPropertyItem(),
+                  //   separatorBuilder: (context, index) => myDivider(),
+                  //   itemCount: 3,
+                  // ),
                   CustomCard(
                       imagePath:
                           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgr4U20-p8WCE-ykuIEFWE5KOs93C1o9NqA&usqp=CAU',
