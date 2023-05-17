@@ -59,25 +59,25 @@ class MaskanCubit extends Cubit<MaskanStates>{
   ];
 
   List<dynamic> properties = [];
-  List<String> image = List.filled(4, "");
-  List<String> address = List.filled(4, "");
-  List<int> prices = List.filled(4, 0);
+  List<String> image = List.filled(5, "");
+  List<String> address = List.filled(5, "");
+  List<int> prices = List.filled(5, 0);
   int length=0;
   void getProperties(){
     emit(MaskanGetPropertiesLoadingState());
     DioHelper.getData(
-      url: 'Property/GetAllProperties',
+      url: 'Property/GetAllProperties/',
       //query: {'PropertyID':'19',}
-    )?.then((value) {
-      length=value?.data[0]["dealType"]["properties"].length;
+     )?.then((value) {
+      length=value?.data.length;
       for(var x=0 ; x< length ; x++){
-       image[x]=value?.data[0]["dealType"]["properties"][x]["images"][0]["imageLink"];
-       address[x]= value?.data[0]["dealType"]["properties"][x]["location"];
-       prices[x]= value?.data[0]["dealType"]["properties"][x]["price"];
+       image[x]=value?.data[x]["images"][0]['imageLink'];
+       address[x]= value?.data[x]["location"];
+       prices[x]= value?.data[x]["price"];
       }
 
       print("this is seller");
-      //print(value?.data[0]["dealType"]["properties"].length);
+      //print();
       //print(value?.data['dealType']['deals']['properties'][0]['seller']['sellerName']);
       print('niceeeeeeeeeeeeeeeee');
       //['dealType']['properties'][0]['seller']['sellerName']
