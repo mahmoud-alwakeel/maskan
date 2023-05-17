@@ -9,6 +9,9 @@ import '../shared/network/remote/api_service.dart';
 
 class PropertiesScreen extends StatefulWidget {
   const PropertiesScreen({Key? key}) : super(key: key);
+
+
+
   @override
   State<PropertiesScreen> createState() => _PropertiesScreenState();
 }
@@ -25,12 +28,14 @@ class _PropertiesScreenState extends State<PropertiesScreen> {
     return BlocConsumer<MaskanCubit , MaskanStates>(
       listener: (context, state){},
         builder: (context, state) {
-        var list = MaskanCubit.get(context).properties;
+        List list = MaskanCubit.get(context).image;
+        List addAdress=MaskanCubit.get(context).address;
+        List addPrice=MaskanCubit.get(context).prices;
         if (state!= MaskanGetPropertiesLoadingState) {
           return ListView.separated(
-            itemBuilder: (context, index) => buildPropertyItem(list),
-            separatorBuilder: (context, index) => myDivider(),
-            itemCount: 6,
+            itemBuilder: (context, index) => buildPropertyItem(list[index],addAdress[index],addPrice[index])
+            ,separatorBuilder: (context, index) => myDivider(),
+            itemCount: MaskanCubit.get(context).length,
           );
         }
         else return Center(child: CircularProgressIndicator(),);

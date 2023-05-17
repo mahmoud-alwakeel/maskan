@@ -194,13 +194,19 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "webview_flutter",
+      "rootUri": "file:///Users/mahmoudalwakeel/.pub-cache/hosted/pub.dev/webview_flutter-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "maskan",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-05-14T19:26:22.939995Z",
+  "generated": "2023-05-17T11:36:06.560740Z",
   "generator": "pub",
   "generatorVersion": "2.19.3"
 }

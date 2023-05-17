@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:maskan/cubit/cubit.dart';
 
-Widget buildPropertyItem(article) => Padding(
+
+//var x = MaskanCubit.get(context);
+Widget buildPropertyItem(list,add,price) => Padding(
   padding: const EdgeInsets.all(16.0),
   child: Row(
     children: [
@@ -10,7 +13,7 @@ Widget buildPropertyItem(article) => Padding(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           image: DecorationImage(
-            image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgr4U20-p8WCE-ykuIEFWE5KOs93C1o9NqA&usqp=CAU',),
+            image: NetworkImage('${list}'),
             fit: BoxFit.cover,
           ),
         ),
@@ -24,7 +27,7 @@ Widget buildPropertyItem(article) => Padding(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
-                child: Text('Title',
+                child: Text('${add}',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
@@ -33,7 +36,8 @@ Widget buildPropertyItem(article) => Padding(
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              Text('date'),
+              Text('Price : ${price} EGP',
+              style: TextStyle(fontWeight: FontWeight.w700),),
             ],
           ),
         ),
