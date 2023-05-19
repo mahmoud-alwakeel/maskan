@@ -49,7 +49,7 @@ class AboutUsScreen extends StatelessWidget {
                       child: Container(
                           padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
                           color: Colors.red,
-                          child: Text(
+                          child: const Text(
                             "MASKAN",
                             style: TextStyle(fontSize: 20),
                           )),
@@ -57,7 +57,7 @@ class AboutUsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               const Divider(
@@ -91,7 +91,7 @@ class AboutUsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               const Divider(
@@ -106,13 +106,13 @@ class AboutUsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset("images/about-us-two.jpeg"),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Who Are We ?",
                             style: TextStyle(
@@ -126,31 +126,31 @@ class AboutUsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 "Why Us ?",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              CustomCard(
-                  imagePath: 'images/card-one.jpg',
+              const CustomCard(
+                  imagePath: 'https://www.mashvisor.com/blog/wp-content/uploads/2019/02/The-Ultimate-Beginners-Guide-to-Real-Estate-Investment-Analysis.jpg',
                   title: 'Analysis',
                   description:
                       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto reprehenderit recusandae suscipit harum .'),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              CustomCard(
-                  imagePath: 'images/card-two.jpg',
+              const CustomCard(
+                  imagePath: 'https://www.iqvis.com/wp-content/uploads/2019/06/Best-Real-Estate-Virtual-Reality-Apps.jpg',
                   title: 'VR Real-estate',
                   description:
                       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto reprehenderit recusandae suscipit harum .'),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              CustomCard(
-                imagePath: 'images/card-three.jpg',
+              const CustomCard(
+                imagePath: 'https://ritu-19.github.io/images/housing_0_2.jpg',
                 title: 'Real-estate Price Prediction',
                 description:
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iusto reprehenderit recusandae suscipit harum .',

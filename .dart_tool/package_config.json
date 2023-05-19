@@ -195,7 +195,7 @@
     },
     {
       "name": "webview_flutter",
-      "rootUri": "file:///Users/mahmoudalwakeel/.pub-cache/hosted/pub.dev/webview_flutter-2.0.3",
+      "rootUri": "file:///Users/mahmoudalwakeel/.pub-cache/hosted/pub.dev/webview_flutter-2.0.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -206,7 +206,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-05-17T14:19:59.585883Z",
+  "generated": "2023-05-19T01:56:58.518839Z",
   "generator": "pub",
   "generatorVersion": "2.19.3"
 }

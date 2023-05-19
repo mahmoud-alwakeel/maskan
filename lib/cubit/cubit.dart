@@ -49,11 +49,11 @@ class MaskanCubit extends Cubit<MaskanStates>{
       label: 'Home',
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.block),
+      icon: Icon(Icons.info),
       label: 'About us',
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.house),
+      icon: Icon(Icons.apartment),
       label: 'Properties',
     ),
   ];
@@ -81,7 +81,7 @@ class MaskanCubit extends Cubit<MaskanStates>{
       //print(value?.data['dealType']['deals']['properties'][0]['seller']['sellerName']);
       print('niceeeeeeeeeeeeeeeee');
       //['dealType']['properties'][0]['seller']['sellerName']
-      //print(value?.data.toString());
+      print(value?.data.toString());
 
       emit(MaskanGetPropertiesSuccessState());
     }).catchError((onError) {

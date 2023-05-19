@@ -46,7 +46,7 @@ class HomeLayout extends StatelessWidget {
                 height: 70.0,),
               title: Text(
                 cubit.titles[cubit.currentIndex],
-              ),
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),),
             ),
             body: bodyWidget,
             bottomNavigationBar: BottomNavigationBar(

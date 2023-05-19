@@ -33,7 +33,7 @@ class _PropertiesScreenState extends State<PropertiesScreen> {
         List addPrice=MaskanCubit.get(context).prices;
         if (state!= MaskanGetPropertiesLoadingState) {
           return ListView.separated(
-            itemBuilder: (context, index) => buildPropertyItem(list[index],addAdress[index],addPrice[index])
+            itemBuilder: (context, index) => buildPropertyItem(list[index],addAdress[index],addPrice[index],context)
             ,separatorBuilder: (context, index) => myDivider(),
             itemCount: MaskanCubit.get(context).length,
           );
