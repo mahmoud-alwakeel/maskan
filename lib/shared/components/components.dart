@@ -14,7 +14,7 @@ void navigateTo(context , widget) => Navigator.push(
 //var x = MaskanCubit.get(context);
 Widget buildPropertyItem(list,add,price,context) => InkWell(
   onTap: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => WebViewScreen('http://192.168.1.23:4200/single-property/23')));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => WebViewScreen('http://192.168.1.36:4200/single-property/23')));
     print("in web view screen");
   },
   child:   Padding(

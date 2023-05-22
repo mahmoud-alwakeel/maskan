@@ -55,7 +55,9 @@ class HomePageScreen extends StatelessWidget {
                       height: 20,
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        MaskanCubit.get(context).changeBottomNavBar(2);
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
                         shape: RoundedRectangleBorder(
@@ -70,7 +72,9 @@ class HomePageScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        MaskanCubit.get(context).changeBottomNavBar(1);
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
                         shape: RoundedRectangleBorder(
@@ -101,7 +105,9 @@ class HomePageScreen extends StatelessWidget {
                             ),
                           ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    MaskanCubit.get(context).changeBottomNavBar(2);
+                  },
                   child: const Text(
                     "All Properties >",
                     style: TextStyle(
@@ -125,69 +131,10 @@ class HomePageScreen extends StatelessWidget {
                   itemCount: 3,
                 ),
               ),
-              // Container(
-              //   color: Colors.grey,
-              //   width: double.infinity,
-              //   height: 1000,
-              //   margin: const EdgeInsets.all(16),
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     mainAxisAlignment: MainAxisAlignment.start,
-              //     children: [
-              //       Row(
-              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //         children: [
-              //           const Text(
-              //             "Latest Properties",
-              //             style: TextStyle(
-              //               fontSize: 20,
-              //               fontWeight: FontWeight.bold,
-              //             ),
-              //           ),
-              //           TextButton(
-              //             onPressed: () {},
-              //             child: const Text(
-              //               "All Property >",
-              //               style: TextStyle(
-              //                 fontWeight: FontWeight.w400,
-              //                 color: Colors.black,
-              //               ),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //
-              //       // CustomCard(
-              //       //     imagePath:
-              //       //     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgr4U20-p8WCE-ykuIEFWE5KOs93C1o9NqA&usqp=CAU',
-              //       //     title: 'Title',
-              //       //     description: 'description'),
-              //       // const SizedBox(
-              //       //   height: 20,
-              //       // ),
-              //       // CustomCard(
-              //       //     imagePath:
-              //       //     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgr4U20-p8WCE-ykuIEFWE5KOs93C1o9NqA&usqp=CAU',
-              //       //     title: 'title',
-              //       //     description: 'description'),
-              //       // const SizedBox(
-              //       //   height: 20,
-              //       // ),
-              //       // CustomCard(
-              //       //     imagePath:
-              //       //     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgr4U20-p8WCE-ykuIEFWE5KOs93C1o9NqA&usqp=CAU',
-              //       //     title: 'title',
-              //       //     description: 'description'),
-              //     ],
-              //   ),
-              // ),
             ],
           );
         });
     //bottomNavigationBar: const BottomAppBar(
   }
 }
-/*
 
-
- */
